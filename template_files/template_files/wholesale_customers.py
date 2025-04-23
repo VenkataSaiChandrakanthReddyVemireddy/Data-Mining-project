@@ -127,7 +127,7 @@ def scatter_plots(df):
 	column_names = df.columns
 	
 	with PdfPages('plots.pdf') as pdf:
-		for i in range(len(column_names)):
+		for i in range(len(column_names)):   
 			for j in range(len(column_names)):
 				if j>i:
 					plt.scatter(df[column_names[i]],df[column_names[j]],c=k_means.labels_)
@@ -146,7 +146,7 @@ stan = standardize(data)
 k =kmeans(data,5)
 #print("K-Means: " + str(k))
 agg = agglomerative(data,5)
-#print("agglo: " + str(agg))
+print("agglo: " + str(agg))
 sil = clustering_score(data,k)
 print("Sil score: " + str(sil))
 a = cluster_evaluation(data)
