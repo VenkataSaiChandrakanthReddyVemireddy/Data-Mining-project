@@ -1,4 +1,4 @@
-# Mining text data.
+# Sentiment Analysis
 
 import pandas as pd
 from nltk.probability import FreqDist
